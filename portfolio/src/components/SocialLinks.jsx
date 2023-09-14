@@ -5,6 +5,48 @@ import { BsFillPersonLinesFill } from 'react-icons/bs'
 
 const SocialLinks = () => {
 
+    const links = [
+        {
+            id:1,
+            child: (
+                <>
+                LinkedIn <FaLinkedin size={30}/>
+            </>
+            ),
+            href: 'https://www.linkedin.com/in/oscar-col%C3%B3n-sanabria-492245217',
+            style: 'rounded-tr-md'
+        },
+        {
+            id:2,
+            child: (
+                <>
+                LinkedIn <FaGithub size={30}/>
+            </>
+            ),
+            href: 'https://github.com/Osc-53219',
+        },
+        {
+            id:3,
+            child: (
+                <>
+                LinkedIn <HiOutlineMail size={30}/>
+            </>
+            ),
+            href: 'mailto:foo@gmail.com',
+        },
+        {
+            id:4,
+            child: (
+                <>
+                LinkedIn <BsFillPersonLinesFill size={30}/>
+            </>
+            ),
+            href: '/resume.pdf',
+            style: 'rounded-br-md',
+            download: true
+        },
+    ]
+
   return (
     <div className='flex flex-col top-[35%] left-0 fixed'>
         <ul>
