@@ -7,6 +7,34 @@ import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
 import reactWeather from '../assets/portfolio/reactWeather.jpg'
 
 const Portfolio = () => {
+
+    const portfolios = [
+        {
+            id: 1,
+            src: arrayDestruct
+        },
+        {
+            id: 2,
+            src: reactParallax
+        },
+        {
+            id: 3,
+            src: navbar
+        },
+        {
+            id: 4,
+            src: reactSmooth
+        },
+        {
+            id: 5,
+            src: installNode
+        },
+        {
+            id: 6,
+            src: reactWeather
+        },
+    ]
+
   return (
     <div 
     name='portfolio'
@@ -17,11 +45,13 @@ const Portfolio = () => {
                 <p className='py-6'>Check out some of my work right here</p>
             </div>
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-
-                <div className='shadow-md shadow-gray-600 rounded-lg'>
+            <div 
+            className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'
+            >
+            {portfolios.map(({id, src}) => (
+                <div key={id}  className='shadow-md shadow-gray-600 rounded-lg'>
                     <img 
-                    src={reactWeather} 
+                    src={src} 
                     alt="" 
                     className='rounded-md duration-200 hover:scale-105'
                     />
@@ -34,7 +64,7 @@ const Portfolio = () => {
                         </button>
                     </div>
                 </div>   
-
+            ))}
             </div>
         </div>
 
