@@ -2,15 +2,20 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
-        <div>
-            <div>
-                <p>Contact</p>
-                <p>Submit the form below to get in touch with me</p>
+    <div 
+    name='contact' 
+    className='w-full md:h-screen bg-gradient-to-b from-black to-blue-950 text-white'>
+        <div className='flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full'>
+            <div className='pb-8'>
+                <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Contact</p>
+                <p className='py-6'>Submit the form below to get in touch with me</p>
             </div>
 
-            <div>
-                <form action="">
+            <div className='flex justify-center items-center'>
+                <form 
+                action="https://getform.io/f/1bc5c03e-8333-4722-a482-ed2102043209"
+                method='POST' 
+                className='flex flex-col w-full md:w-1/2'>
                     <input 
                     type="text" 
                     name='name' 
@@ -20,9 +25,10 @@ const Contact = () => {
                     type="text" 
                     name='email' 
                     placeholder='Enter your email' 
-                    className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'/>
+                    className='my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'/>
                     <textarea 
-                    name="message" 
+                    name="message"
+                    placeholder='Enter your message' 
                     rows="10" 
                     className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'>
                     </textarea>
